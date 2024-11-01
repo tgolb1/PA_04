@@ -1,0 +1,41 @@
+AUTHOR: Tommy Golbranson
+ASSIGNMENT: PA 04 - Thread Synchronization
+ID: 2457886
+
+FILES:
+- buffer.h
+- Checksum.c
+- prodcon.c
+- README (this file)
+- prodcon (executable file)
+
+COMPATIBLITY:
+This project is developed in C and requires a POSIX-compliant environment (e.g., Linux or macOS)
+
+EXECUTION: 
+enter the following 2 lines in a terminal:
+    gcc prodcon.c Checksum.c -o prodcon
+    ./prodcon <delay> <producer_threads> <consumer_threads>
+
+ where:
+  <delay> = number of seconds to run the simulation
+  <producer_threads> = number of producer threads to create
+  <consumer_threads> = number of consumer threads to create
+
+SAMPLE INPUT:
+./prodcon 4 2 2
+
+SAMPLE OUTPUT:
+producer produced 1870966608
+producer produced 1871540048
+consumer consumed 1872113488
+consumer consumed 1872113488
+consumer consumed 1872686928
+producer produced 1871540048
+consumer consumed 1872113488
+consumer consumed 1872113488
+producer produced 1870966608
+producer produced 1870966608
+producer produced 1871540048
+Terminating...
+done
